@@ -101,6 +101,7 @@ readonly SYSTEM_FILES=(
     "LICENSE"
     "__azurite_db_*.json"
     "azdps-docai-3532ea781451.json"
+    "$DEFAULT_OUTPUT_FILE"
 )
 
 # Combine all exclusions
