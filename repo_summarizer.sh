@@ -97,7 +97,6 @@ readonly BUILD_FILES=(
 
 readonly SYSTEM_FILES=(
     ".DS_Store"
-    "$SCRIPT_NAME"
     "LICENSE"
     "__azurite_db_*.json"
     "azdps-docai-3532ea781451.json"
@@ -228,7 +227,12 @@ done
 eval "$FIND_CMD" | while IFS= read -r file; do
     {
         echo "===== $file ====="
+        echo ""
+        echo "\`\`\`\`\`\`"
         cat "$file"
+        # Ensure there's a newline before closing delimiter if file doesn't end with one
+        [[ $(tail -c1 "$file") != $'\n' ]] && echo ""
+        echo "\`\`\`\`\`\`"
         echo -e "\n\n"
     } >>"$OUTPUT_FILE"
 done
