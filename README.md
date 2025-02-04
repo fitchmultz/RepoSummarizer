@@ -46,6 +46,7 @@ rsum() {
 
 ## Roadmap
 
+- [ ] AI version that automatically determines which files to include/exclude
 - [ ] Additional file type support
 - [ ] Parallel processing implementation
 - [ ] Enhanced metrics and statistics
